@@ -12,7 +12,10 @@
     <header>
       <div class="container">
         <nav class="navbar">
-          <a href="#" class="nav-branding">LOGO</a>
+          <a href="#" class="nav-branding"
+            ><img src="budgetBuddy.png" alt="Budget Buddy"
+          /></a>
+
           <ul class="nav-menu">
             <li class="nav-item">
               <a href="#" class="nav-link">Home</a>
@@ -39,13 +42,13 @@
     <div id="outside-container">
       <section id="budget-container">
         <h2>Budget</h2>
-        <input type="number" placeholder="Enter Budget Amount" />
+        <input type="number" id="budgetValue" placeholder="Enter Budget Amount" />
         <button id="budget-submit">Submit</button>
       </section>
       <section id="spent-container">
         <h2>Spent</h2>
       </section>
-      <section>
+      <section id="remaining-container">
         <h2>Remaining</h2>
       </section>
     </div>
