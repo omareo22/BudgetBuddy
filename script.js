@@ -17,7 +17,6 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 const totalBudget = 0;
 document.getElementById("budget-submit").addEventListener("click", (e) => {
   const budgetValue = document.getElementById("budgetValue").value
-  console.log(budgetValue)
   updateBudget(budgetValue);
 });
 
