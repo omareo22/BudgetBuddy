@@ -30,8 +30,8 @@ a {
   align-items: center;
 }
 
-.nav-branding {
-  font-size: 2rem;
+img {
+  margin-top: 5px;
 }
 
 .nav-menu {
