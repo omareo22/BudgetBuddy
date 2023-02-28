@@ -64,6 +64,23 @@ a {
   background-color: #000;
 }
 
+#outside-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box;
+
+  }
+
+  #outside-container section {
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 30%;
+    padding: 10px;
+  }
+
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
