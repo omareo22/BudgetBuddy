@@ -38,11 +38,16 @@
         </nav>
       </div>
     </header>
+    <!-- Main -->
 
     <div id="outside-container">
       <section id="budget-container">
         <h2>Budget</h2>
-        <input type="number" id="budgetValue" placeholder="Enter Budget Amount" />
+        <input
+          type="number"
+          id="budgetValue"
+          placeholder="Enter Budget Amount"
+        />
         <button id="budget-submit">Submit</button>
       </section>
       <section id="spent-container">
@@ -54,25 +59,28 @@
     </div>
     <div id="form-container">
       <section id="category-container">
-      <form>
-        <label for="category">Choose a Category:</label>
+        <form>
+          <label for="category">Choose a Category:</label>
 
-        <select name="category" id="category">
-          <option value="bills">Bills</option>
-          <option value="entertainment">Entertainment</option>
-          <option value="food">Food</option>
-          <option value="clothing">Clothing</option>
-        </select>
-        <input
-              type="number"
-              id="total-amount"
-              placeholder="Enter Total Amount"
-            />
-        <input id="debit-submit" type="submit" value="Submit">
-    </form>
-  </section>
+          <select name="category" id="category">
+            <option value="bills">Bills</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="food">Food</option>
+            <option value="clothing">Clothing</option>
+          </select>
+          <input
+            type="number"
+            id="total-amount"
+            placeholder="Enter Total Amount"
+          />
+          <input id="debit-submit" type="submit" value="Submit" />
+        </form>
+      </section>
     </div>
-
+    <!-- TOTAL CONTAINER BEGINNING -->
+    <div class="total-container" id="total-container">
+      <section class="total-box" id="total-box">Total</section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
