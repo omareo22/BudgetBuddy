@@ -15,10 +15,10 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 );
 
 let totalBudget = 0;
-let bills = 0;
-let food = 0;
-let clothing = 0;
-let entertainment = 0;
+let billsValue = 0;
+let foodValue = 0;
+let clothingValue = 0;
+let entertainmentValue = 0;
 let totalSpent = 0;
 
 document.getElementById("budget-submit").addEventListener("click", (e) => {
@@ -38,11 +38,28 @@ function updateCategory(category, money) {
   if (parseInt(money) > totalBudget) {
     window.alert("You don't have enough money for this");
   } else {
-    category += parseInt(money);
     totalSpent += parseInt(money);
     totalBudget -= parseInt(money);
     updateBudget(totalBudget);
     updateSpent(totalSpent);
+    switch (category) {
+      case "bills":
+        billsValue += parseInt(money);
+        updateTotal("bills", billsValue);
+        break;
+      case "entertainment":
+        entertainmentValue += parseInt(money);
+        updateTotal("entertainment", entertainmentValue);
+        break;
+      case "food":
+        foodValue += parseInt(money);
+        updateTotal("food", foodValue);
+        break;
+      case "clothing":
+        clothingValue += parseInt(money);
+        updateTotal("clothing", clothingValue);
+        break;
+    }
   }
 }
 
@@ -80,5 +97,30 @@ function updateSpent(spent) {
   }
 }
 
+function updateTotal(category, values) {
+  const nameLI = `${category}Name`;
+  const nameExist = document.getElementById(nameLI);
+  const nameList = document.createElement('li');
+  const nameNode = document.createTextNode(`${category}`);
+  
+  if (nameExist === null) { 
+    nameList.appendChild(nameNode);
+    nameList.setAttribute("id", nameLI);
+    document.getElementById("name-list").appendChild(nameList);
+   }
+
+  const updateExists = document.getElementById(category);
+  const updateNumber = document.createElement('li');
+  const updateNode = document.createTextNode(`${values}`);
+  if (updateExists === null) { 
+    updateNumber.appendChild(updateNode);
+    updateNumber.setAttribute("id", category);
+    document.getElementById("number-list").appendChild(updateNumber);
+  } else {
+    const newUpdate = document.getElementById(category);
+    newUpdate.innerText = `${values}` ;
+    updateNumber.setAttribute("id", category);
+  }
+}
 
 })();
