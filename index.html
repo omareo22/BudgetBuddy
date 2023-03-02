@@ -1,67 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Budget Buddy</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="container">
-        <nav class="navbar">
-          <a href="#" class="nav-branding"
-            ><img src="budgetBuddy.png" alt="Budget Buddy"
-          /></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Budget Buddy</title>
+</head>
 
-          <ul class="nav-menu">
-            <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">User</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">Contact</a>
-            </li>
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- Main -->
+<body>
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" class="nav-branding"><img src="budgetBuddy.png" alt="Budget Buddy" /></a>
 
-    <div id="outside-container">
-      <section id="budget-container">
-        <h2>Budget</h2>
-        <input
-          type="number"
-          id="budgetValue"
-          placeholder="Enter Budget Amount"
-        />
-        <button id="budget-submit">Submit</button>
-      </section>
-      <section id="spent-container">
-        <h2>Spent</h2>
-      </section>
-      <section id="remaining-container">
-        <h2>Remaining</h2>
-      </section>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">User</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
     </div>
-    <div id="form-container">
-      <section id="category-container">
-        <form>
-          <label for="category">Choose a Category:</label>
+  </header>
+  <!-- Main -->
 
+<<<<<<< Updated upstream
           <select name="category" id="category">
             <option value="bills">Bills</option>
             <option value="entertainment">Entertainment</option>
@@ -85,3 +63,44 @@
     <script src="script.js"></script>
   </body>
 </html>
+=======
+  <div id="outside-container">
+    <section id="budget-container">
+      <h2>Budget</h2>
+      <input type="number" id="budgetValue" placeholder="Enter Budget Amount" />
+      <button id="budget-submit">Submit</button>
+    </section>
+    <section id="spent-container">
+      <h2>Spent</h2>
+    </section>
+    <section id="remaining-container">
+      <h2>Remaining</h2>
+    </section>
+  </div>
+  <div id="form-container">
+    <section id="category-container">
+      <form>
+        <label for="category">Choose a Category:</label>
+
+        <select name="category" id="category">
+          <option value="bills">Bills</option>
+          <option value="entertainment">Entertainment</option>
+          <option value="food">Food</option>
+          <option value="clothing">Clothing</option>
+        </select>
+        <input type="number" id="total-amount" placeholder="Enter Total Amount" />
+        <input id="debit-submit" type="submit" value="Submit" />
+      </form>
+    </section>
+  </div>
+  <!-- TOTAL CONTAINER BEGINNING -->
+  <div class="total-container" id="total-container">
+    <section class="total-box" id="total-box">
+      <h2>Total</h2>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
+>>>>>>> Stashed changes

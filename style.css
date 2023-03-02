@@ -70,6 +70,7 @@ img {
   width: 80%;
   margin: auto;
   box-sizing: border-box;
+  
 }
 
 #budget-container {
@@ -109,6 +110,7 @@ h2 {
   width: 100%;
   margin: auto;
   box-sizing: border-box;
+  
 }
 
 #form-container section {
@@ -119,6 +121,37 @@ h2 {
   margin: auto;
   margin-top: 20px;
 }
+#budget-container {
+  background-color: green;
+  color: white;
+ 
+  }
+  
+  #spent-container {
+    background-color: rgb(243, 203, 45);
+    color: white;
+    
+  }
+  
+  #remaining-container {
+    background-color: blue;
+    color: white;
+    
+  }
+  
+  #category-container {
+    background-color:rgb(243, 203, 45);
+    color: white;
+    
+  }
+  
+  #total-box {
+    background-color: red;
+    color: white;
+    
+  }
+
+
 
 form {
   display: flex;
@@ -156,6 +189,7 @@ form button {
   width: 90%;
   padding: 10px;
 }
+
 
 @media (max-width: 768px) {
   .hamburger {
