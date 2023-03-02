@@ -21,13 +21,11 @@ let clothingValue = 0;
 let entertainmentValue = 0;
 let totalSpent = 0;
 
-//budget input
 document.getElementById("budget-submit").addEventListener("click", (e) => {
   const budgetValue = document.getElementById("budgetValue").value
   updateBudget(budgetValue);
 });
 
-// putting in the budget section
 document.getElementById("debit-submit").addEventListener("click", (e) => {
   const categoryValue = document.getElementById("category").value;
   const amountValue = document.getElementById("total-amount").value;
