@@ -66,17 +66,42 @@ img {
 
 #outside-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 80%;
   margin: auto;
   box-sizing: border-box;
 }
 
+#budget-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#spent-container section {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+#remaining-container section {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
 #outside-container section {
+  display: flexbox;
+  justify-content: space-around;
   box-sizing: border-box;
   border: 1px solid black;
-  width: 30%;
+  width: 100%;
   padding: 10px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 #form-container {
@@ -89,10 +114,32 @@ img {
 #form-container section {
   box-sizing: border-box;
   border: 1px solid black;
-  width: 30%;
+  width: 80%;
   padding: 10px;
   margin: auto;
   margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 10px;
+}
+select {
+  margin-bottom: 10px;
+}
+
+#budget-container button {
+  width: 30%;
+  margin: auto;
+}
+
+form button {
+  width: 25%;
+  margin: auto;
 }
 
 .total-container {
@@ -146,5 +193,10 @@ img {
   .nav-menu.active {
     left: 0;
     padding: 0;
+  }
+
+  #outside-container {
+    display: flex;
+    flex-direction: column;
   }
 }
