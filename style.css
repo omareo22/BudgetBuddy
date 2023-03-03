@@ -70,11 +70,13 @@ img {
   width: 80%;
   margin: auto;
   box-sizing: border-box;
+  gap: 20px;
 }
 
 #budget-container {
   display: flex;
   flex-direction: column;
+  background-color: #36a754;
 }
 
 #spent-container section {
@@ -83,10 +85,18 @@ img {
   padding: 0px;
 }
 
+#spent-container {
+  background-color: #fbbc08;
+}
+
 #remaining-container section {
   display: flex;
   flex-direction: column;
   padding: 0px;
+}
+
+#remaining-container {
+  background-color: #4185f4;
 }
 
 #outside-container section {
@@ -102,6 +112,10 @@ h2 {
   text-align: center;
   margin-bottom: 10px;
   margin-top: 0;
+  color: #fff;
+}
+#category-container {
+  background-color: #fbbc08;
 }
 
 #form-container {
@@ -147,14 +161,30 @@ form button {
   width: 100%;
   margin-top: 20px;
   box-sizing: border-box;
-  align-items: center;
-  justify-content: center;
 }
 
 .total-box {
   border: 1px solid black;
-  width: 90%;
+  width: 79%;
   padding: 10px;
+  margin: auto;
+  background-color: #e94335;
+  color: #fff;
+  display: block;
+}
+
+#total-box li {
+  display: block;
+}
+
+#billsName,
+#entertainmentName {
+  float: left;
+  display: block;
+}
+
+#name-list {
+  display: block;
 }
 
 @media (max-width: 768px) {
