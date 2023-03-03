@@ -77,16 +77,21 @@ img {
   display: flex;
   flex-direction: column;
   background-color: #36a754;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 #spent-container section {
   display: flex;
   flex-direction: column;
   padding: 0px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 }
 
 #spent-container {
   background-color: #fbbc08;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 #remaining-container section {
@@ -97,6 +102,8 @@ img {
 
 #remaining-container {
   background-color: #4185f4;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 #outside-container section {
@@ -113,6 +120,10 @@ h2 {
   margin-bottom: 10px;
   margin-top: 0;
   color: #fff;
+}
+
+h3 {
+  text-align: center;
 }
 #category-container {
   background-color: #fbbc08;
@@ -132,6 +143,8 @@ h2 {
   padding: 10px;
   margin: auto;
   margin-top: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 form {
@@ -171,22 +184,24 @@ form button {
   background-color: #e94335;
   color: #fff;
   display: block;
-}
-
-#total-box li {
-  display: block;
-}
-
-#billsName,
-#entertainmentName {
-  float: left;
-  display: block;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 #name-list {
-  display: block;
+  float: left;
+}
+#number-list {
+  float: right;
 }
 
+#total-box {
+  display: flexbox;
+  background-color: red;
+  color: white;
+}
+
+/* MEDI */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
