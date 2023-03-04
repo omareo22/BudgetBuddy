@@ -124,10 +124,12 @@ h2 {
   margin-bottom: 10px;
   margin-top: 0;
   color: #fff;
+  text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
 }
 
 h3 {
   text-align: center;
+  text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
 }
 #category-container {
   background-color: #fbbc08;
@@ -237,6 +239,23 @@ form button {
   color: white;
 }
 
+#chart {
+  margin-top: 25px;
+  width: 100%;
+}
+#piechart {
+  height: 500px;
+  width: 100%;
+}
+
+rect {
+  display: flex;
+  justify-content: center;
+}
+
+/* MEDI */
+=======
+
 
 @media (max-width: 768px) {
   .hamburger {
@@ -279,5 +298,21 @@ form button {
   #outside-container {
     display: flex;
     flex-direction: column;
+  }
+  #piechart {
+    height: 400px;
+    width: 100%;
+  }
+  #chart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+    box-sizing: border-box;
+  }
+
+  rect {
+    height: 100px;
+    width: 100px;
   }
 }
