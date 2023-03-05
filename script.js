@@ -57,6 +57,9 @@
     updateCategory(categoryValue, amountValue);
   });
 
+  window.addEventListener("resize", function(){
+    drawChart() }, true);
+
   function updateCategory(category, money) {
     if (isNaN(parseInt(money))) {
       window.alert("Please enter a number");
