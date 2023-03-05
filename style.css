@@ -183,8 +183,6 @@ h3 {
     
   }
 
-
-
 form {
   display: flex;
   flex-direction: column;
@@ -200,11 +198,15 @@ select {
 #budget-container button {
   width: 30%;
   margin: auto;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 form button {
   width: 25%;
   margin: auto;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .total-container {
@@ -254,6 +256,7 @@ rect {
 }
 
 /* MEDI */
+
 
 
 @media (max-width: 768px) {
