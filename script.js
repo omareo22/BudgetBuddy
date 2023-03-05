@@ -58,7 +58,9 @@
   });
 
   function updateCategory(category, money) {
-    if (parseInt(money) > totalBudget) {
+    if (isNaN(parseInt(money))) {
+      window.alert("Please enter a number");
+    } else if (parseInt(money) > totalBudget) {
       window.alert("You don't have enough money for this");
     } else {
       totalSpent += parseInt(money);
