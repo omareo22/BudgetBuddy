@@ -18,7 +18,7 @@
 
 -Javacript
 
--Chart.js
+-Google Charts
 
 -Git
 
