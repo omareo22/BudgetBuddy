@@ -61,34 +61,34 @@
     drawChart() }, true);
 
   function updateCategory(category, money) {
-    if (isNaN(parseInt(money))) {
+    if (isNaN(parseFloat(money))) {
       window.alert("Please enter a number");
-    } else if (parseInt(money) > totalBudget) {
+    } else if (parseFloat(money) > totalBudget) {
       window.alert("You don't have enough money for this");
     } else {
-      totalSpent += parseInt(money);
-      totalBudget -= parseInt(money);
+      totalSpent += parseFloat(money);
+      totalBudget -= parseFloat(money);
       updateBudget(totalBudget);
       updateSpent(totalSpent);
       switch (category) {
         case "bills":
-          billsValue += parseInt(money);
-          updateTotal("bills", billsValue);
+          billsValue += parseFloat(money);
+          updateTotal("Bills", billsValue);
           drawChart();
           break;
         case "entertainment":
-          entertainmentValue += parseInt(money);
-          updateTotal("entertainment", entertainmentValue);
+          entertainmentValue += parseFloat(money);
+          updateTotal("Entertainment", entertainmentValue);
           drawChart();
           break;
         case "food":
-          foodValue += parseInt(money);
-          updateTotal("food", foodValue);
+          foodValue += parseFloat(money);
+          updateTotal("Food", foodValue);
           drawChart();
           break;
         case "clothing":
-          clothingValue += parseInt(money);
-          updateTotal("clothing", clothingValue);
+          clothingValue += parseFloat(money);
+          updateTotal("Clothing", clothingValue);
           drawChart();
           break;
       }
@@ -96,40 +96,43 @@
   }
 
   function updateBudget(budget) {
+    const floatBudget = parseFloat(budget).toFixed( 2 )
     const budgetExists = document.getElementById("Budget");
     const budgetNumber = document.createElement("h3");
-    const budgetNode = document.createTextNode(budget);
+    const budgetNode = document.createTextNode(`$${floatBudget}`);
     if (budgetExists === null) {
       budgetNumber.appendChild(budgetNode);
       budgetNumber.setAttribute("id", "Budget");
       document.getElementById("remaining-container").appendChild(budgetNumber);
-      totalBudget = parseInt(budget);
+      totalBudget = parseFloat(floatBudget);
     } else {
       const newBudget = document.getElementById("Budget");
-      newBudget.innerText = budget;
+      newBudget.innerText = `$${budget.toFixed( 2 )}`;
       budgetNumber.setAttribute("id", "Budget");
-      totalBudget = parseInt(budget);
+      totalBudget = parseFloat(floatBudget);
     }
   }
 
   function updateSpent(spent) {
+    const floatSpent = parseFloat(spent).toFixed( 2 )
     const spentExists = document.getElementById("Spent");
     const spentNumber = document.createElement("h3");
-    const spentNode = document.createTextNode(spent);
+    const spentNode = document.createTextNode(`$${floatSpent}`);
     if (spentExists === null) {
       spentNumber.appendChild(spentNode);
       spentNumber.setAttribute("id", "Spent");
       document.getElementById("spent-container").appendChild(spentNumber);
-      totalSpent = parseInt(spent);
+      totalSpent = parseFloat(spent);
     } else {
       const newSpent = document.getElementById("Spent");
-      newSpent.innerText = spent;
+      newSpent.innerText = `$${floatSpent}`;
       spentNumber.setAttribute("id", "Budget");
-      totalSpent = parseInt(spent);
+      totalSpent = parseFloat(spent);
     }
   }
 
   function updateTotal(category, values) {
+    const floatValues = parseFloat(values).toFixed( 2 )
     const nameLI = `${category}Name`;
     const nameExist = document.getElementById(nameLI);
     const nameList = document.createElement("li");
@@ -143,14 +146,14 @@
 
     const updateExists = document.getElementById(category);
     const updateNumber = document.createElement("li");
-    const updateNode = document.createTextNode(`${values}`);
+    const updateNode = document.createTextNode(`$${floatValues}`);
     if (updateExists === null) {
       updateNumber.appendChild(updateNode);
       updateNumber.setAttribute("id", category);
       document.getElementById("number-list").appendChild(updateNumber);
     } else {
       const newUpdate = document.getElementById(category);
-      newUpdate.innerText = `${values}`;
+      newUpdate.innerText = `$${floatValues}`;
       updateNumber.setAttribute("id", category);
     }
   }
